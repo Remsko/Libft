@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 10:38:09 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:30 by rpinoit          ###   ########.fr       */
+/*   Created: 2017/11/13 12:43:18 by rpinoit           #+#    #+#             */
+/*   Updated: 2017/11/13 12:47:47 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	free(*ap);
-	*ap = NULL;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

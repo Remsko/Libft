@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:13:20 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/09 11:19:44 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/13 14:19:42 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		(*f)(i, &s[i]);
 		i++;
 	}
-}
-
-int		main(void)
-{
-	return (0);
 }

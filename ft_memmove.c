@@ -6,17 +6,17 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:10:25 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/09 10:11:48 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/13 16:55:50 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const coid *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *tmp;
+	char	tmp[len];
 
-	ft_memcpy(tmp, s2, n);
-	ft_memcpy(s1, tmp, n);
-	return (s1);
+	ft_memcpy(tmp, src, len);
+	ft_memcpy(dst, tmp, len);
+	return (dst);
 }

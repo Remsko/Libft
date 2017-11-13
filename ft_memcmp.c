@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:07:47 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/09 10:09:58 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/13 17:04:18 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	s1_tmp = (unsigned char*)s1;
 	s2_tmp = (unsigned char*)s2;
 	i = 0;
-	while (str1[i] && str2[i] && str1[i] == str2[i] && i < n)
+	while (n--)
+	{
+		if (s1_tmp[i] != s2_tmp[i])
+			return (s1_tmp[i] - s2_tmp[i]);
 		i++;
-	return (str1[i] - str2[i]);
+	}
+	return (0);
 }

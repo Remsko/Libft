@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:26:08 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/09 10:43:34 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/13 13:23:57 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,4 @@ void	*ft_memalloc(size_t size)
 		return (NULL);
 	ft_memset(dst, 0, size);
 	return (dst);
-}
-
-int		main(void)
-{
-	return (0);
 }

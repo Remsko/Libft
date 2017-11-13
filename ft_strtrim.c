@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:16:06 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/09 16:08:51 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/13 16:09:04 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,8 @@ char	*ft_strtrim(char const *s)
 	i = 0;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	while (s[i] != '\0' && s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+	while (s[i] != '\0' && (s[i] != ' ' && s[i] != '\n' && s[i] != '\t'))
 		dst[j++] = s[i++];
 	dst[i] = '\0';
 	return (dst);
-}
-
-int		main(void)
-{
-	printf("%s", ft_strtrim("    bryantou  "));
-	return (0);
 }
