@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:00:36 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/14 17:21:07 by rpinoit          ###   ########.fr       */
+/*   Created: 2017/11/14 20:49:10 by rpinoit           #+#    #+#             */
+/*   Updated: 2017/11/15 12:27:00 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t			i;
-	unsigned char	*tmp_s1;
-	unsigned char	*tmp_s2;
+	t_list	*new;
+	size_t	i;
 
 	i = 0;
-	tmp_s1 = (unsigned char*)s1;
-	tmp_s2 = (unsigned char*)s2;
-	if (n == 0)
-		return (0);
-	while (tmp_s1[i] == tmp_s2[i] && tmp_s1[i] != '\0' && tmp_s2[i] != '\0' \
-			&& (i < (n - 1)))
-		i++;
-	return (tmp_s1[i] - tmp_s2[i]);
+	if (!(new = (t_list*)malloc(sizeof(*new))))
+		return (NULL);
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else
+	{
+		if (!(new->content = malloc(sizeof(content))))
+			return (NULL);
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

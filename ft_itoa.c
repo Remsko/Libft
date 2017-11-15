@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:46:33 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/13 14:51:38 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/14 18:21:59 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char		*ft_itoa(int n)
 	while (tmp_n /= 10)
 		len++;
 	len = len + sign;
-	if (!(tab = (char*)malloc(sizeof(*tab) * len + 1)))
+	if (!(tab = (char*)malloc(sizeof(*tab) * (len + 2))))
 		return (NULL);
 	tab[len + 1] = '\0';
 	return (ft_push_in_tab(tab, len, n, sign));

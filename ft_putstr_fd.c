@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:38:53 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/13 12:43:00 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/14 20:06:06 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char const *s, int fd)
 	size_t i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL && fd)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		while (s[i] != '\0')
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }
