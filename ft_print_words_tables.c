@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 12:56:31 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/16 12:58:31 by rpinoit          ###   ########.fr       */
+/*   Created: 2017/11/16 15:13:26 by rpinoit           #+#    #+#             */
+/*   Updated: 2017/11/16 15:25:57 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_print_words_tables(char **tab)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (0);
-	if (ft_strncmp(s1, s2, n) == 0)
-		return (1);
-	return (0);
+	while (tab[i] != '\0')
+	{
+		ft_putstr(tab[i]);
+		ft_putchar('\n');
+		i++;
+	}
 }

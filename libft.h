@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/14 21:36:13 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/11/20 10:39:24 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -34,10 +33,10 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s1);
-char				*ft_strcpy(char *dest, char *src);
-char				*ft_strncpy(char *dest, char *src, size_t n);
-char				*ft_strcat(const char *dest, const char *src);
-char				*ft_strncat(const char *dest, const char *src, size_t n);
+char				*ft_strcpy(char *dest, const char *src);
+char				*ft_strncpy(char *dest, const char *src, size_t n);
+char				*ft_strcat(char *dest, const char *src);
+char				*ft_strncat(char *dest, const char *src, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -84,5 +83,14 @@ void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_count_words(char const *s, char c);
+int					ft_atoi_base(const char *str, int str_base);
+const char			*ft_isspace(const char *str);
+void				ft_print_words_tables(char **tab);
+char				*ft_itoa_base(int value, int base);
+void				ft_swap(int *a, int *b);
+int					ft_sqrt(int nb);
+int					ft_find_next_prime(int nb);
+int					ft_isnegative(int n);
 
 #endif

@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 12:56:31 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/16 12:58:31 by rpinoit          ###   ########.fr       */
+/*   Created: 2017/11/16 18:45:21 by rpinoit           #+#    #+#             */
+/*   Updated: 2017/11/16 18:54:46 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+static int	ft_is_prime(int nb)
 {
-	size_t i;
+	int nbr;
 
-	i = 0;
-	if (s1 == NULL || s2 == NULL)
+	nbr = 2;
+	if (nb <= 1)
 		return (0);
-	if (ft_strncmp(s1, s2, n) == 0)
-		return (1);
-	return (0);
+	while (nbr <= nb / nbr)
+	{
+		if (nb % nbr == 0)
+			return (0);
+		else
+			nbr++;
+	}
+	return (1);
+}
+
+int			ft_find_next_prime(int nb)
+{
+	if (ft_is_prime(nb) == 0)
+		return (ft_find_next_prime(nb + 1));
+	else
+		return (nb);
 }

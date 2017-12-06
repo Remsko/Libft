@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 12:56:31 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/16 12:58:31 by rpinoit          ###   ########.fr       */
+/*   Created: 2017/11/16 18:42:18 by rpinoit           #+#    #+#             */
+/*   Updated: 2017/11/16 18:46:26 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int	ft_sqrt(int nb)
 {
-	size_t i;
+	int i;
 
-	i = 0;
-	if (s1 == NULL || s2 == NULL)
+	i = 3;
+	if (nb <= 0 || nb == 2 || nb == 3)
 		return (0);
-	if (ft_strncmp(s1, s2, n) == 0)
+	if (nb == 1)
 		return (1);
-	return (0);
+	while (i * i < nb)
+		i++;
+	if (nb % i == 0)
+		return (i);
+	else
+		return (0);
 }
