@@ -6,14 +6,14 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 09:38:07 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/12/05 18:48:53 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/12/06 14:00:53 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "libft/libft.h"
+# include "libft.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
