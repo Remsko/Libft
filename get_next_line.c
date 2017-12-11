@@ -6,11 +6,11 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 10:01:51 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/12/06 13:56:32 by rpinoit          ###   ########.fr       */
+/*   Updated: 2017/12/11 15:45:13 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int	cut_line(char **pos, char **line)
 {
