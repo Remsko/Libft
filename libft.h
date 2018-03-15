@@ -90,7 +90,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_count_words(char const *s, char c);
 int					ft_atoi_base(const char *str, int str_base);
-const char			*ft_isspace(const char *str);
 void				ft_print_words_tables(char **tab);
 char				*ft_itoa_base(int value, int base);
 void				ft_swap(int *a, int *b);
@@ -98,5 +97,6 @@ int					ft_sqrt(int nb);
 int					ft_find_next_prime(int nb);
 int					ft_isnegative(int n);
 int					get_next_line(const int fd, char **line);
+int					ft_isspace(int c);
 
 #endif
