@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/12/11 15:44:11 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/03/19 20:26:35 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int					ft_find_next_prime(int nb);
 int					ft_isnegative(int n);
 int					get_next_line(const int fd, char **line);
 int					ft_isspace(int c);
+int					ft_intmax(int x, int y);
 
 #endif

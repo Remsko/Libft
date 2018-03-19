@@ -69,7 +69,9 @@ FILES = ft_lstdel.c \
 		ft_sqrt.c \
 		ft_find_next_prime.c \
 		ft_isnegative.c \
-		get_next_line.c
+		get_next_line.c \
+		ft_intmax.c \
+
 O_DIR = ft_lstdel.o \
 		ft_memmove.o \
 		ft_strchr.o \
@@ -137,7 +139,9 @@ O_DIR = ft_lstdel.o \
 		ft_sqrt.o \
 		ft_find_next_prime.o \
 		ft_isnegative.o \
-		get_next_line.o
+		get_next_line.o \
+		ft_intmax.o \
+
 all: $(NAME)
 
 $(NAME):
