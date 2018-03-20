@@ -17,9 +17,9 @@ char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		len;
-	char	*str;
+	char		*str;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
 	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
@@ -29,8 +29,7 @@ char	*ft_strtrim(char const *s)
 		len--;
 	if (len <= 0)
 		len = 0;
-	str = (char*)malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
+	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	s += i;
 	i = -1;

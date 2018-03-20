@@ -100,5 +100,6 @@ int					get_next_line(const int fd, char **line);
 int					ft_isspace(int c);
 int					ft_intmax(int x, int y);
 int					ft_intpow(int n, int p);
+char					*ft_strndup(const char *s, size_t n);
 
 #endif
