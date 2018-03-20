@@ -71,6 +71,7 @@ FILES = ft_lstdel.c \
 		ft_isnegative.c \
 		get_next_line.c \
 		ft_intmax.c \
+		ft_intpow.c
 
 O_DIR = ft_lstdel.o \
 		ft_memmove.o \
@@ -141,6 +142,7 @@ O_DIR = ft_lstdel.o \
 		ft_isnegative.o \
 		get_next_line.o \
 		ft_intmax.o \
+		ft_intpow.o
 
 all: $(NAME)
 

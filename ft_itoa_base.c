@@ -11,50 +11,30 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-static char	*ft_push_in_tab_base(int len, long tmp_value, int base)
+# define CONV (value % base < 10 ? '0' : 'A' - 10)
+
+char            *ft_itoa_base(int value, int base)
 {
-	char	*tab;
+        char            *str;
+        int             len;
+        int             tmp;
 
-	if (!(tab = (char*)malloc(sizeof(*tab) * (len + 2))))
-		return (NULL);
-	while (len > -1)
-	{
-		tab[len] = tmp_value % base < 10 ?
-			tmp_value % base + '0' : tmp_value % base - 10 + 'A';
-		tmp_value = tmp_value / (long)base;
-		len--;
-	}
-	return (tab);
-}
-
-char		*ft_itoa_base(int value, int base)
-{
-	int		len;
-	long	tmp_value;
-	long	tmp_value2;
-	int		sign;
-	char	*tab;
-
-	len = 0;
-	sign = 0;
-	tmp_value = (long)value;
-	if (base <= 1 || base > 16)
-		return (0);
-	if (value < 0)
-	{
-		sign = 1;
-		tmp_value = -tmp_value;
-	}
-	tmp_value2 = tmp_value;
-	while (tmp_value /= (long)base)
-		len++;
-	len = len + sign;
-	tab = ft_push_in_tab_base(len, tmp_value2, base);
-	tab[len + 1] = '\0';
-	if (sign == 1)
-		tab[0] = '-';
-	return (tab);
+        if (base < 2 || base > 16)
+                return (NULL);
+        len = (value <= 0);
+        tmp = value;
+        while (++len && tmp)
+                tmp /= base;
+        if (!(str = (char *)malloc(sizeof(*str) * (len))))
+                return (NULL);
+        str[--len] = '\0';
+        tmp = (value < 0) ? -1 : 1;
+        while (len)
+        {
+                str[--len] = (value % base) * tmp + CONV;
+                value /= base;
+        }
+        tmp < 0 ? *str = '-' : 0;
+        return (str);
 }
