@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/19 20:26:35 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/03/21 11:19:24 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,7 @@ int					ft_isspace(int c);
 int					ft_intmax(int x, int y);
 int					ft_intpow(int n, int p);
 char					*ft_strndup(const char *s, size_t n);
+int					ft_unblen(uintmax_t n, uintmax_t base);
+int					ft_nblen(intmax_t n, intmax_t base);
 
 #endif

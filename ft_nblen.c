@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_nblen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 12:56:31 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 12:47:46 by rpinoit          ###   ########.fr       */
+/*   Created: 2018/03/21 11:05:38 by rpinoit           #+#    #+#             */
+/*   Updated: 2018/03/21 11:19:18 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_unblen(uintmax_t n, uintmax_t base)
 {
-	if (!s1 || !s2)
-		return (0);
-	return ((ft_strncmp(s1, s2, n) == 0) ? 1 : 0);
+	int len;
+
+	len = 1;
+	while (n /= base)
+		++len;
+	return (len);
+}
+
+int		ft_nblen(intmax_t n, intmax_t base)
+{
+	int len;
+
+	len = 1;
+	while (n /= base)
+		++len;
+	return (len);
 }

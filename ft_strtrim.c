@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:16:06 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/11/16 18:03:59 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/03/21 11:22:54 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		len;
-	char		*str;
+	char	*str;
 
 	if (!s)
 		return (NULL);
