@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 14:10:56 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:13:31 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ int					ft_intpow(int n, int p);
 char				*ft_strndup(const char *s, size_t n);
 int					ft_unblen(uintmax_t n, uintmax_t base);
 int					ft_nblen(intmax_t n, intmax_t base);
+int					ft_unblen(uintmax_t n, uintmax_t base);
 
 #endif

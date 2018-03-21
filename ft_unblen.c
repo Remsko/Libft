@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nblen.c                                         :+:      :+:    :+:   */
+/*   ft_unblen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/21 11:05:38 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 14:12:45 by rpinoit          ###   ########.fr       */
+/*   Created: 2018/03/21 14:12:52 by rpinoit           #+#    #+#             */
+/*   Updated: 2018/03/21 14:13:17 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nblen(intmax_t n, intmax_t base)
+int		ft_unblen(uintmax_t n, uintmax_t base)
 {
 	int len;
 
