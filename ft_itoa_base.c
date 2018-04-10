@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 15:29:47 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 11:24:52 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/04/10 16:45:33 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_itoa_base(int value, int base)
 
 	if (base < 2 || base > 16)
 		return (NULL);
-	len = (value <= 0);
+	len = (value == 0 || (value < 0 && base == 0));
 	tmp = value;
 	while (++len && tmp)
 		tmp /= base;
@@ -34,6 +34,6 @@ char	*ft_itoa_base(int value, int base)
 		str[--len] = (value % base) * tmp + CONV;
 		value /= base;
 	}
-	tmp < 0 ? *str = '-' : 0;
+	(tmp < 0 && base == 10) ? *str = '-' : 0;
 	return (str);
 }
