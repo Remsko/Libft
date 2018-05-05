@@ -6,7 +6,7 @@
 /*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 14:13:31 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/05 14:01:33 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 # include <fcntl.h>
 
 # define BUFF_SIZE 32
+# define TRUE 1
+# define FALSE 0
+
+typedef unsigned char	t_bool;
 
 typedef struct		s_list
 {
