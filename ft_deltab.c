@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_deltab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 16:53:34 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/12/19 13:15:32 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:58:07 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,12 @@
 void	ft_deltab(void *content, size_t content_size)
 {
 	char	**tmp;
-	size_t	i;
+	int		i;
 
 	i = 0;
 	tmp = (char**)content;
 	(void)content_size;
 	while (tmp[i])
-	{
-		free(tmp[i]);
-		i++;
-	}
+		free(tmp[i++]);
 	free(tmp);
 }

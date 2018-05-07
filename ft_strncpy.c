@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:03:28 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 14:03:34 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/07 13:46:26 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 		*str++ = *src++;
 		--n;
 	}
+	*str = '\0';
 	while (n--)
 		*str++ = '\0';
 	return (dest);

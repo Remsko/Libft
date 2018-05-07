@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:35:36 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/03/21 14:01:26 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:03:25 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+#include <stdio.h>
 char	**ft_strsplit(char const *s, char c)
 {
 	size_t		len;
@@ -36,6 +38,6 @@ char	**ft_strsplit(char const *s, char c)
 			s += len;
 		}
 	}
-	*tab = NULL;
+	tab[0] = NULL;
 	return (ret);
 }

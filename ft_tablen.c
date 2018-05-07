@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpinoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 16:58:36 by rpinoit           #+#    #+#             */
-/*   Updated: 2017/12/13 16:58:45 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/07 13:59:07 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int		ft_tablen(char **str)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (*str++)
-		i++;
+	if (str)
+		while (str[i++] != NULL)
+			;
 	return (i);
 }

@@ -75,6 +75,8 @@ FILES = ft_lstdel.c \
 		ft_strndup.c \
 		ft_nblen.c \
 		ft_unblen.c \
+		ft_deltab.c \
+		ft_tablen.c \
 
 O_DIR = ft_lstdel.o \
 		ft_memmove.o \
@@ -149,6 +151,8 @@ O_DIR = ft_lstdel.o \
 		ft_strndup.o \
 		ft_nblen.o \
 		ft_unblen.o \
+		ft_deltab.o \
+		ft_tablen.o \
 
 all: $(NAME)
 
