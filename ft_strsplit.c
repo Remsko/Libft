@@ -6,14 +6,12 @@
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:35:36 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/05/07 14:03:25 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/05/11 15:19:01 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-#include <stdio.h>
 char	**ft_strsplit(char const *s, char c)
 {
 	size_t		len;
