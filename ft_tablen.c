@@ -6,7 +6,7 @@
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 16:58:36 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/05/07 13:59:07 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/06/17 16:09:27 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_tablen(char **str)
 
 	i = 0;
 	if (str)
-		while (str[i++] != NULL)
-			;
+		while (str[i] != NULL)
+			++i;
 	return (i);
 }
