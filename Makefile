@@ -76,6 +76,7 @@ SRC =	ft_lstdel.c \
 		ft_deltab.c \
 		ft_tablen.c \
 		ft_lstrev.c \
+		ft_isstrint.c \
 
 OBJ = $(SRC:.c=.o)
 

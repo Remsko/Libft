@@ -6,7 +6,7 @@
 /*   By: remsko <remsko@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:38:40 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/06/17 12:20:31 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/06/17 15:39:41 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,6 @@ char				*ft_strndup(const char *s, size_t n);
 int					ft_tablen(char **str);
 void				ft_deltab(void *content, size_t content_size);
 void				ft_lstrev(t_list **alist);
+t_bool				ft_isstrint(char *str, int *target);
 
 #endif
