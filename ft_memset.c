@@ -6,13 +6,13 @@
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:57:37 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/10/09 22:53:55 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/10/10 09:38:53 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static inline void copy_64byte(long int dst_ptr, unsigned long int cccc)
+static inline void	copy_64byte(long int dst_ptr, unsigned long int cccc)
 {
 	((unsigned long int *)dst_ptr)[0] = cccc;
 	((unsigned long int *)dst_ptr)[1] = cccc;
@@ -24,7 +24,8 @@ static inline void copy_64byte(long int dst_ptr, unsigned long int cccc)
 	((unsigned long int *)dst_ptr)[7] = cccc;
 }
 
-static inline void copy_8byte_multiple(long int *dst_ptr, size_t *len, unsigned long int cccc)
+static inline void	copy_8byte_pow(long int *dst_ptr, size_t *len, \
+		unsigned long int cccc)
 {
 	size_t xlen;
 
@@ -46,10 +47,10 @@ static inline void copy_8byte_multiple(long int *dst_ptr, size_t *len, unsigned 
 	*len %= 8;
 }
 
-void *ft_memset(void *dst, int c, size_t len)
+void				*ft_memset(void *dst, int c, size_t len)
 {
-	long int dst_ptr;
-	unsigned long int cccc;
+	long int			dst_ptr;
+	unsigned long int	cccc;
 
 	dst_ptr = (long int)dst;
 	if (len >= 8)
@@ -58,14 +59,13 @@ void *ft_memset(void *dst, int c, size_t len)
 		cccc |= cccc << 8;
 		cccc |= cccc << 16;
 		cccc |= cccc << 32;
-		;
 		while (dst_ptr % 8 != 0)
 		{
 			((unsigned char *)dst_ptr)[0] = c;
 			dst_ptr += 1;
 			len -= 1;
 		}
-		copy_8byte_multiple(&dst_ptr, &len, cccc);
+		copy_8byte_pow(&dst_ptr, &len, cccc);
 	}
 	while (len > 0)
 	{
