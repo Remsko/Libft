@@ -78,6 +78,8 @@ SRC =	ft_lstdel.c \
 	ft_lstrev.c \
 	ft_isstrint.c \
 	ft_intlen.c \
+	ft_strnlen.c \
+	ft_arrdel.c \
 
 OBJ_PATH = obj/
 OBJ_NAME = $(SRC:.c=.o)

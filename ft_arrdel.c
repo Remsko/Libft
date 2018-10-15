@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_arrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 11:03:28 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/10/15 14:01:22 by rpinoit          ###   ########.fr       */
+/*   Created: 2018/10/15 14:33:50 by rpinoit           #+#    #+#             */
+/*   Updated: 2018/10/15 14:39:01 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+void	ft_arrdel(void **arr)
 {
-	size_t size;
-   
-	size = ft_strnlen(src, n);
-	if (size != n)
-		ft_memset (dest + size, '\0', n - size);
-	return (ft_memcpy(dest, src, size));
+	char	**tmp;
+	int		i;
+
+   	tmp = (char **)arr;
+	i = 0;
+	while (tmp[i] != NULL)
+		free(tmp[i++]);
+	free(tmp);
 }
